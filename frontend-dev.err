@@ -1,0 +1,66 @@
+ ⨯ ./app/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4mD:\datathon\frontend\app\page.tsx[0m:55:1]
+ [2m52[0m |       <div className="overview-heading"><div><div className="panel-eyebrow">CITYPULSE ? CIVIC OPERATIONS</div><h2>City overview</h2><p>One clear view of reported issues, review priorities, and response activity.</p></div><button className="small-button" onClick={()=>void act(refresh,'Data refreshed')}><RotateCw size={14}/> Refresh data</button></div>
+ [2m53[0m |       <div className="overview-kpis"><Kpi value={count(summary?.incidents)} label="INCIDENTS" icon={<Activity size={15}/>} /><Kpi value={count(summary?.open_incidents)} label="UNRESOLVED" icon={<AlertTriangle size={15}/>} color="amber" /><Kpi value={count(summary?.complaints)} label="PUBLIC COMPLAINTS" icon={<FileText size={15}/>} /><Kpi value={count(summary?.locations)} label="LOCATIONS" icon={<Database size={15}/>} /></div>
+ [2m54[0m |       <div className="overview-grid"><section className="glass overview-card priority-overview"><div className="overview-card-head"><div><div className="panel-eyebrow">HUMAN REVIEW QUEUE</div><h3>Priority locations</h3></div><small>Top {Math.min(10,sorted.length)} of {sorted.length}</small></div><p className="panel-sub">Transparent ranking from severity, unresolved reports, and incident volume.</p><div className="overview-priorities">{sorted.slice(0,10).map((p,i)=><div className="overview-priority" key={p.location_id}><span className="rank-num">{String(i+1).padStart(2,'0')}</span><div><b>{p.zone}</b><small>{p.location_id} ? {p.incident_count} reports ? {p.critical} critical</small></div><strong style={{color:scoreColor(p.score)}}>{Number(p.score).toFixed(1)}</strong><button onClick={()=>{setQuery(p.zone||'');setView('COMPLAINTS')}} aria-label={`Review complaints for ${p.zone}`}>Review</button></div>)}</div><div className="queue-foot"><ShieldCheck size={14}/> Review aid only ? humans decide next action</div></section>
+ [2m55[0m |       <div className="overview-side"><section className="glass overview-card"><div className="panel-eyebrow">REPORTED ISSUES</div><h3>Incident mix</h3><Bars values={summary?.category_counts||{}/></section><section className="glass overview-card"><div className="panel-eyebrow">SEVERITY CHECK</div><h3>Open incident signals</h3><Bars values={summary?.severity_counts||{}/><div className="overview-note">{summary?.active_demo_emergencies??0} active simulated emergency cases ? no real alerts are sent.</div></section></div></div>
+    : [35;1m                                                                                                                                                                                                  ^[0m
+ [2m56[0m |       <section className="glass overview-card recent-incidents"><div className="overview-card-head"><div><div className="panel-eyebrow">SOURCE RECORDS</div><h3>Recent incident records</h3></div><button className="small-button" onClick={()=>setView('DATA & MODEL')}>Data quality <ChevronRight size={14}/></button></div><div className="table-wrap"><table><thead><tr><th>INCIDENT</th><th>TYPE</th><th>SEVERITY</th><th>ZONE</th><th>LOCATION</th><th>REPORTED</th><th>STATUS</th></tr></thead><tbody>{incidents.slice(0,12).map(i=><tr key={i.incident_id}><td><b>{i.incident_id}</b></td><td>{i.incident_type}</td><td><span className="severity-pill" style={{'--sev':SEVERITIES[i.severity]||'#8293aa'} as React.CSSProperties}>{i.severity}</span></td><td>{i.zone}</td><td>{i.location_id}</td><td>{String(i.timestamp).slice(0,16)}</td><td>{i.resolved?'Resolved':'Open'}</td></tr>)}</tbody></table>{!incidents.length&&<Empty icon={<Activity/>} title="No incident records" text="Imported incident rows will appear here when the API is ready."/>}</div></section>
+ [2m57[0m |     </main>}
+ [2m57[0m | 
+    `----
+  [31mx[0m Expression expected
+    ,-[[36;1;4mD:\datathon\frontend\app\page.tsx[0m:55:1]
+ [2m52[0m |       <div className="overview-heading"><div><div className="panel-eyebrow">CITYPULSE ? CIVIC OPERATIONS</div><h2>City overview</h2><p>One clear view of reported issues, review priorities, and response activity.</p></div><button className="small-button" onClick={()=>void act(refresh,'Data refreshed')}><RotateCw size={14}/> Refresh data</button></div>
+ [2m53[0m |       <div className="overview-kpis"><Kpi value={count(summary?.incidents)} label="INCIDENTS" icon={<Activity size={15}/>} /><Kpi value={count(summary?.open_incidents)} label="UNRESOLVED" icon={<AlertTriangle size={15}/>} color="amber" /><Kpi value={count(summary?.complaints)} label="PUBLIC COMPLAINTS" icon={<FileText size={15}/>} /><Kpi value={count(summary?.locations)} label="LOCATIONS" icon={<Database size={15}/>} /></div>
+ [2m54[0m |       <div className="overview-grid"><section className="glass overview-card priority-overview"><div className="overview-card-head"><div><div className="panel-eyebrow">HUMAN REVIEW QUEUE</div><h3>Priority locations</h3></div><small>Top {Math.min(10,sorted.length)} of {sorted.length}</small></div><p className="panel-sub">Transparent ranking from severity, unresolved reports, and incident volume.</p><div className="overview-priorities">{sorted.slice(0,10).map((p,i)=><div className="overview-priority" key={p.location_id}><span className="rank-num">{String(i+1).padStart(2,'0')}</span><div><b>{p.zone}</b><small>{p.location_id} ? {p.incident_count} reports ? {p.critical} critical</small></div><strong style={{color:scoreColor(p.score)}}>{Number(p.score).toFixed(1)}</strong><button onClick={()=>{setQuery(p.zone||'');setView('COMPLAINTS')}} aria-label={`Review complaints for ${p.zone}`}>Review</button></div>)}</div><div className="queue-foot"><ShieldCheck size={14}/> Review aid only ? humans decide next action</div></section>
+ [2m55[0m |       <div className="overview-side"><section className="glass overview-card"><div className="panel-eyebrow">REPORTED ISSUES</div><h3>Incident mix</h3><Bars values={summary?.category_counts||{}/></section><section className="glass overview-card"><div className="panel-eyebrow">SEVERITY CHECK</div><h3>Open incident signals</h3><Bars values={summary?.severity_counts||{}/><div className="overview-note">{summary?.active_demo_emergencies??0} active simulated emergency cases ? no real alerts are sent.</div></section></div></div>
+    : [35;1m                                                                                                                                                                                                   ^[0m
+ [2m56[0m |       <section className="glass overview-card recent-incidents"><div className="overview-card-head"><div><div className="panel-eyebrow">SOURCE RECORDS</div><h3>Recent incident records</h3></div><button className="small-button" onClick={()=>setView('DATA & MODEL')}>Data quality <ChevronRight size={14}/></button></div><div className="table-wrap"><table><thead><tr><th>INCIDENT</th><th>TYPE</th><th>SEVERITY</th><th>ZONE</th><th>LOCATION</th><th>REPORTED</th><th>STATUS</th></tr></thead><tbody>{incidents.slice(0,12).map(i=><tr key={i.incident_id}><td><b>{i.incident_id}</b></td><td>{i.incident_type}</td><td><span className="severity-pill" style={{'--sev':SEVERITIES[i.severity]||'#8293aa'} as React.CSSProperties}>{i.severity}</span></td><td>{i.zone}</td><td>{i.location_id}</td><td>{String(i.timestamp).slice(0,16)}</td><td>{i.resolved?'Resolved':'Open'}</td></tr>)}</tbody></table>{!incidents.length&&<Empty icon={<Activity/>} title="No incident records" text="Imported incident rows will appear here when the API is ready."/>}</div></section>
+ [2m57[0m |     </main>}
+ [2m57[0m | 
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: MapScene is not defined
+    at Home (app\page.tsx:50:8)
+  48 |
+  49 |     {view==='MAP'&&<main className="map-dashboard">
+> 50 |       <MapScene locations={sorted} onSelect={(p)=>{setQuery(p.zone||'');}} />
+     |        ^
+  51 |       <aside className="map-left">
+  52 |         <div className="map-kpis">
+  53 |           <Kpi value={count(summary?.incidents)} label="INCIDENT RECORDS" icon={<Activity size={15}/>} /> {
+  digest: '3572376004'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: onSelect is not defined
+    at MapScene (app\page.tsx:107:16)
+  105 |     const draw=()=>{controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(draw)};draw();
+  106 |     return()=>{cancelAnimationFrame(frame);observer.disconnect();document.removeEventListener('citypulse:focus-location',focus);renderer.domElement.removeEventListener('click',choose);controls.dispose();scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const materials=Array.isArray(o.material)?o.material:[o.material];materials.forEach(m=>m.dispose())}});renderer.dispose();el.replaceChildren()};
+> 107 |   },[locations,onSelect]);
+      |                ^
+  108 |   return <div className="map-scene" ref={host} aria-label="Interactive three dimensional incident priority map">{picked&&<div className="glass map-selected"><small>SELECTED PRIORITY LOCATION</small><strong>{picked.zone} <span>· {picked.location_id}</span></strong><b style={{color:scoreColor(picked.score)}}>{Number(picked.score).toFixed(1)}</b><span>{picked.incident_count} reports · {picked.critical} critical · {picked.road_type}</span></div>}<button className="map-reset" onClick={()=>setPicked(null)} aria-label="Clear selected location">Reset view</button></div>;
+  109 | }
+  110 | {
+  digest: '3320451459'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ReferenceError: onSelect is not defined
+    at MapScene (app\page.tsx:107:16)
+  105 |     const draw=()=>{controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(draw)};draw();
+  106 |     return()=>{cancelAnimationFrame(frame);observer.disconnect();document.removeEventListener('citypulse:focus-location',focus);renderer.domElement.removeEventListener('click',choose);controls.dispose();scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const materials=Array.isArray(o.material)?o.material:[o.material];materials.forEach(m=>m.dispose())}});renderer.dispose();el.replaceChildren()};
+> 107 |   },[locations,onSelect]);
+      |                ^
+  108 |   return <div className="map-scene" ref={host} aria-label="Interactive three dimensional incident priority map">{picked&&<div className="glass map-selected"><small>SELECTED PRIORITY LOCATION</small><strong>{picked.zone} <span>· {picked.location_id}</span></strong><b style={{color:scoreColor(picked.score)}}>{Number(picked.score).toFixed(1)}</b><span>{picked.incident_count} reports · {picked.critical} critical · {picked.road_type}</span></div>}<button className="map-reset" onClick={()=>setPicked(null)} aria-label="Clear selected location">Reset view</button></div>;
+  109 | }
+  110 | {
+  digest: '3320451459'
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.next/
+node_modules/
+frontend/node_modules/
+frontend/.next/
+.npm-cache/
+.uv-cache/
+data/*.sqlite3
+data/*.sqlite3-*
+.env
+frontend/.env.local

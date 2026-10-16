@@ -1,0 +1,62 @@
+
+> citypulse-frontend@1.0.0 dev
+> next dev --hostname 127.0.0.1
+
+   ▲ Next.js 15.5.28
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 5.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.6s (605 modules)
+ GET / 200 in 6749ms
+ ✓ Compiled in 1103ms (245 modules)
+ ✓ Compiled in 472ms (245 modules)
+ ✓ Compiled in 303ms (245 modules)
+ ✓ Compiled in 231ms (259 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 1993ms (352 modules)
+ GET / 200 in 4068ms
+ ✓ Compiled in 893ms (597 modules)
+ GET / 200 in 2466ms
+ ✓ Compiled in 883ms (597 modules)
+ GET / 200 in 625ms
+ GET / 200 in 109ms
+ GET / 200 in 1234ms
+ ✓ Compiled in 3.6s (597 modules)
+ ✓ Compiled in 1064ms (611 modules)
+ GET / 200 in 400ms
+ ✓ Compiled in 775ms (597 modules)
+ ✓ Compiled in 749ms (597 modules)
+ GET / 200 in 2433ms
+ GET / 200 in 291ms
+ GET / 200 in 668ms
+ ✓ Compiled in 1161ms (597 modules)
+ ✓ Compiled in 993ms (597 modules)
+ ✓ Compiled in 1152ms (597 modules)
+ ✓ Compiled in 444ms (597 modules)
+ ✓ Compiled in 698ms (597 modules)
+ ✓ Compiled in 719ms (611 modules)
+ ✓ Compiled in 385ms (611 modules)
+ GET / 200 in 1403ms
+ GET / 200 in 142ms
+ ✓ Compiled in 780ms (597 modules)
+ GET / 200 in 903ms
+ GET / 200 in 177ms
+ ✓ Compiled in 1077ms (597 modules)
+ GET / 200 in 751ms
+ GET / 200 in 294ms
+ ✓ Compiled in 1053ms (583 modules)
+ ✓ Compiled in 846ms (597 modules)
+ GET / 200 in 539ms
+ ✓ Compiled in 1279ms (583 modules)
+ GET / 200 in 673ms
+ ✓ Compiled in 5.4s (583 modules)
+ GET / 500 in 1053ms
+ ✓ Compiled in 1262ms (589 modules)
+ GET / 200 in 899ms
+ ✓ Compiled in 928ms (589 modules)
+ GET / 500 in 618ms
+ ✓ Compiled in 934ms (589 modules)
+ GET / 500 in 538ms
